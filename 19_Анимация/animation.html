@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>jQuery</title>
+        <meta charset="UTF-8"/>
+        <script src = 'http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+        <script type="text/javascript">
+            function hideComments(){
+                   $("#comments").hide(1000, function () {
+                        $("#hide").hide();
+                        $("#show").show();
+                   });
+            }
+
+            function showComments() {
+                $("#hide").show();
+                $("#show").hide();
+                $("#comments").show(1000);
+            }
+
+            $(document).ready (function () {
+               $("#hide").on ("click", hideComments);
+               $("#show").on ("click", showComments);
+            });
+        </script>
+    </head>
+    <body>
+
+        <a href="#" id="hide"  onclick="return false">Скрыть коментарий</a>
+        <a href="#" id="show" style="display:none" onclick="return false">Показать комментарий</a>
+
+        <div id="comments">
+            <p>Комментарий №1</p>
+            <p>Комментарий №2</p>
+            <p>Комментарий №3</p>
+        </div>
+
+    </body>
+</html>

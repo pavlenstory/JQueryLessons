@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>jQuery</title>
+        <meta charset="UTF-8"/>
+        <script src = 'http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+        <script type="text/javascript">
+            function incSize(event){
+                var width = Number(event.target.style.width.substring(0,event.target.style.width.length -2));//.target обьект который мы хотим .style узнаем у него стиль и у стиля .width берем значение свойства ширины
+                    event.target.style.width = (width + 5) + "px";
+                    $("<p>Координаты мышки при нажатии: x - " + event.screenX + ", y - " + event.screenY + "</p>").insertAfter("div:last");//инсерт афтер значит вставляем после последнего дива
+
+            }
+            $(document).ready(function () {
+                $("div").bind("click", incSize);//при клике будет вызываться функция incSize
+                $(document).on("click", "p", function () {
+                        alert("Test");
+                    });
+            });
+        </script>
+    </head>
+    <body>
+    <div style="height: 50px; width: 50px; background-color: red" /></div><!-- высота ширина цвет -->
+    <div style="height: 50px; width: 50px; background-color: blue" /></div><!-- высота ширина цвет -->
+    <div style="height: 50px; width: 50px; background-color: green" /></div><!-- высота ширина цвет -->
+
+    </body>
+</html>

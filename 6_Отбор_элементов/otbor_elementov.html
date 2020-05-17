@@ -1,0 +1,26 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html"; charset="utf-8/">
+	<title>Изучаем язык jQuery</title>
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+</head>
+<body>
+
+	<ul id="menu">
+        <li><a href="">Ссылка 1</a></li>
+        <li><a href="">Ссылка 2</a></li>
+        <li><a href="">Ссылка 3</a></li>
+        <li><a href="">Ссылка 4</a></li>
+        <li><a href="">Ссылка 5</a></li>
+    </ul>
+
+    <a href="">Ссылка 6</a>
+	<script type="text/javascript">
+        var link = $("#menu li a:first");//выбираем первую ссылку поочереди обращаемся к каждому элементу первой ссылки
+        //.html для того что бы посмотреть что там находиться
+
+        link = $("#menu li a:eq(2)");// eq это обозначает эквивалента, береться второй элемент
+        alert(link.html());
+    </script>
+</body>
+</html>

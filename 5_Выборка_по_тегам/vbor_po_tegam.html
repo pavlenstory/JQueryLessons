@@ -1,0 +1,25 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html"; charset="utf-8/">
+	<title>Изучаем язык jQuery</title>
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+</head>
+<body>
+	<div class="test">Test 1</div>
+	<div class="test">Test 2</div>
+	<p class="test">Test 3</p>
+    <p class="test">Test 4</p>
+
+    <img src="1.jpg" alt="1" />
+    <img src="2.jpg" alt="2" title="2" />
+
+
+	<script type="text/javascript">
+	    var test = $("div");//ссылаемся к div
+        alert(test.length);//выводим длину массива
+
+        var img = $("img[title]");//мы выбрали все теги img у которых присутстует title
+        alert(img.length);
+    </script>
+</body>
+</html>

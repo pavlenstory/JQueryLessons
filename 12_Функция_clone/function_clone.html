@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+ <title></title>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <style>
+
+    </style>
+
+</head>
+<body>
+
+    <div id="div" style="background-color: antiquewhite">
+        Блокs
+        <p>Абзац</p>
+    </div>
+    <script type="text/javascript">
+        var block = $("#div").clone();//создаем переменную блок туда помещаем див и добавляем функцию клоне
+        block.html("<p>Новый текст</p>");// записываем в переменную блок новый текст
+        block.css("font-size", "40px");// применяем новый стиль высоту текста
+        block.css("width", "200px");
+        $("body").append(block);//в боди добавили переменную блок в которой находиться див
+    </script>
+</body>
+</html>

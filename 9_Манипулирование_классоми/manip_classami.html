@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+ <title></title>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <style>
+    .div_1 {
+        background-color: darkred;
+    }
+
+    .div_2 {
+        background-color: goldenrod;
+    }
+    </style>
+
+</head>
+<body>
+
+    <div id="text_1">Текст</div>
+
+   <script>
+       var div = prompt("1 или 2?");
+       while(div != 1 && div != 2) {
+            alert("Пожалуйста ввидите число 1 либо 2")
+           div = prompt("1 или 2");
+       }
+       $("#text_1").attr ("class", "div_" + div);
+       alert($("#text_1").get(0).className);
+   </script>
+
+</body>
+</html>

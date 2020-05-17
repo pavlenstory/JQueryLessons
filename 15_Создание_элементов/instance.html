@@ -1,0 +1,17 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html"; charset="utf-8/">
+	<title>Изучаем язык jQuery</title>
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+</head>
+<body>
+
+    <div>Блок</div>
+
+	<script type="text/javascript">
+	    $("<p>Небольшой текст<p/>").prependTo("div");//мы создали элемент и добовляем его к диву
+        $("<p>Второй небольшой текст<p/>").insertBefore("div");
+        $("<p>Последний текст</p>").insertAfter("div");
+	</script>
+</body>
+</html>

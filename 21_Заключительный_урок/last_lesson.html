@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>jQuery</title>
+        <meta charset="UTF-8"/>
+        <script src = 'http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#img").bind("click", function (event) {
+                    $(event.target).parent().css("text-align", "center");
+                    $(event.target).animate({
+                        width: $(event.target).width() * 5,//Каждых 4 секунды увеличиваем ширину на 5
+                        height: $(event.target).height() * 5,//Каждых 3 секунды увеличиваем высоту на 5
+                    }, 1000);
+                });
+            });
+        </script>
+    </head>
+    <body>
+
+        <p id="test">
+            <img src="https://stroimdom54.ru/wp-content/uploads/2018/03/Kd_NOo6dbM8.jpg" alt="Изображение" title="Изображение" id="img" width="400"/>
+
+        </p>
+
+    </body>
+</html>

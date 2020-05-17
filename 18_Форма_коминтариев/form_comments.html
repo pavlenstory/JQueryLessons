@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>jQuery</title>
+        <meta charset="UTF-8"/>
+        <script src = 'http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+        <script type="text/javascript">
+            $(document).ready(function () {//когда страница загрузиться
+               $(document).on("click", "#add_comment", function(){//мы проверим если пользователь нажал на add_comment
+                    var form = $("form[name='form']");//сдесь находиться наша формочка которая вызываеться
+                    form.css("display", "block");//добовляем к нашей формочке класс css
+                    $("#add_comment").replaceWith(form);
+               });//при клике на add_comment
+
+               $(document).on("click","input[name = 'send']",function(){
+  var comment = $("textarea[name='comment']").val();
+  alert('Подождите идет загрузка комментариев....');
+  $("<p>" + comment + "</p>").appendTo("#comments");
+
+
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="comments">
+            <p>Комментарий №1</p>
+            <p>Комментарий №2</p>
+            <p>Комментарий №3</p>
+        </div>
+
+        <form name="form" action="#" method="post" id="form" style="display:none" onsubmit="return false">
+            <textarea id="textarea" name="comment" cols="30" rows="10"></textarea><br />
+            <input type="submit" name="send" value="Добавить комментарий" id="done" />
+        </form>
+
+        <a href="#"  onclick="return false" id="add_comment" >Добавить комментарий
+        </a>
+    </body>
+</html>
+

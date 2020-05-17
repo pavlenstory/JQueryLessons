@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+ <title></title>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <style>
+
+    </style>
+
+</head>
+<body>
+
+    <div id="div">Блок
+        <p>Абзац</p>
+    </div>
+    <script>
+        alert($("#div").html());//html выводит все значения в блоке div
+        alert($("#div").text());//выводит исключительно текст
+        ($("p").html("<p>Новый текст</p>"));//заменяет текст на новый
+    </script>
+</body>
+</html>

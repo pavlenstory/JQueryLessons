@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>jQuery</title>
+        <meta charset="UTF-8"/>
+        <script src = 'http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+        <script type="text/javascript">
+            function val()
+            {
+                var text = $("#text").val();
+                if(text.length > 0){
+                alert(text);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" name="text" id = "text" />
+        <input type="button" value = "Готово" onclick = "return val()" id = "text" />
+    </body>
+</html>
+

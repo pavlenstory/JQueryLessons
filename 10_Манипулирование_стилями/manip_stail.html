@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+ <title></title>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <style>
+
+    </style>
+
+</head>
+<body>
+
+    <div id="div">Блок</div>
+    <script type="text/javascript">
+        $("#div").css("font-size", "25px");
+        $("#div").css("color", "red");
+        $("#div").css("background-color", function() {
+            return "blue";
+        });
+
+        $("#div").css("width", "350px");//блок в ширину 250 пикслей
+
+        $("#div").css("height", function() {
+            var height = prompt("Введите высоту: ");
+            return height + "px";
+        });
+    </script>
+</body>
+</html>
